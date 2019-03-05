@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin: 100px auto 0;
+    width: 600px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.logo {
+    width: 600px;
+    height: 200px;
+    /* background: red; */
+    /*<img>为行级块元素，可以用text-align:center居中*/
+    text-align: center;
+}
+
+img {
+    transform: rotate (-0.001deg);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 50px solid black;
+}
+
+.tool {
+    position: relative;
+    margin-top: 150px;
+    height: 100px;
+    width: 600px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.tool i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    font-size: 10px;
+}
+
+.valume {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+#valumeLogo {
+    padding-top: 150px;
+}
+
+.valume #valume {
+    /* transform: rotate (-90deg); */
+    /* 音量旋转 */
+    -webkit-transform: rotate(-90deg);
+    position: relative;
+    top: -105px;
+    left: -40px;
+    display: none;
+}
+
+.progress {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
+    width: 400px;
+    /* background: red; */
+}
+
+.tool span {
+    display: inline-block;
+    line-height: 30px;
+}
+
+.currentTime {
+    width: 80px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    /* border: 1px solid black; */
+}
+
+.allTime {
+    width: 80px;
+    height: 30px;
+    float: right;
+    text-align: center;
+    color: #fff;
+    /* border: 1px solid black; */
+}
+
+.pro-box {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 30px;
+    /* background: black; */
+}
+
+.pro-bg {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.pro-active {
+    position: absolute;
+    background: #fff;
+    width: 6px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.pro-active .radio {
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.radio-box {
+    position: absolute;
+    right: 0;
+    margin-right: -10px;
+    top: 50%;
+    margin-top: -9px;
+    width: 20px;
+    height: 20px;
+    /* background: red; */
+    cursor: pointer;
+}
+
+
+/* 去除系统默认的样式 */
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100px;
+    border-radius: 5px;
+    /*这个属性设置使填充进度条时的图形为圆角*/
+}
+
+
+/* 给滑动轨道(track)添加样式 */
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 2px;
+    width: 8px;
+    border-radius: 5px;
+    /*将轨道设为圆角的*/
+    /* box-shadow: #999; */
+    /* box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; */
+    /*轨道内置阴影效果*/
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+
+/* 给滑块(thumb)添加样式 */
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 8px;
+    width: 8px;
+    /* left: 50%;
+    padding-left: -40px; */
+    top: 50%;
+    margin-top: -3px;
+    /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%;
+    /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547;
+    /*添加底部阴影*/
+}
